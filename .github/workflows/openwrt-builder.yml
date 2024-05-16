@@ -84,8 +84,10 @@ jobs:
         $GITHUB_WORKSPACE/$DIY_P2_SH
         
     - name: SSH connection to Actions
-      uses: csexton/debugger-action@master
-
+      #uses: csexton/debugger-action@master
+      uses: mxschmitt/action-tmate@v3
+      timeout-minutes: 15
+      
     - name: Download package
       id: package
       run: |
